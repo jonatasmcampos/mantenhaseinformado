@@ -1,0 +1,65 @@
+@keyframes fade-in {
+    from { opacity: 0 }
+    to   { opacity: 1 }
+} 
+
+header{
+    background: linear-gradient(to top, #fff, 60%, #a9a9a9);
+    padding: 150px 20px 150px 20px;
+}
+
+.headerDiv{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 'texts image';
+}
+
+.texts{
+    text-align: center;
+    grid-area: texts;
+    padding-right: 20px;
+}
+.texts h1{
+    background: linear-gradient(to right, #ffa500, #ff6b00, #ff1616);
+    background-clip: text;
+    -webkit-background-clip: text;     
+    -webkit-text-fill-color: transparent;
+    color: black;    
+    font-size:  2.2rem;
+}
+
+.headerLogo {
+    grid-area: image;    
+    opacity: 0;
+    animation: fade-in 2s normal forwards ease-in-out;
+    animation-play-state: paused
+}
+header.loaded img {
+    animation-play-state: running
+}  
+header.loaded img:nth-child(1){ animation-delay: 3s }
+
+.headerHR{
+    margin: 0;
+    height: 5px;
+    background: linear-gradient(to right, #ffa500, #ff6b00, #ff0000);
+}
+
+@media(max-width: 960px){
+    header{
+        padding: 0px 20px 20px 20px;
+    }
+    .headerDiv{
+        grid-template-columns: 1fr;
+        grid-template-areas: 'texts'
+                             'image';
+    }
+    .texts{
+        padding: 20px;
+    }
+    .headerLogo{
+        width: 400px;
+    }
+}
