@@ -17,6 +17,7 @@ nav img{
 
 nav img:hover{
     border: 2px dotted #FFF;
+    border-radius: 7px;
 }
 
 .zoomnav{

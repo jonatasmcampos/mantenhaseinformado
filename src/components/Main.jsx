@@ -20,8 +20,10 @@ import LogoGDocs from './../images/logoGoogleDocs.png'
 import LogoGSheets from './../images/logoGoogleSheets.png'
 import LogoGSlides from './../images/logoGoogleSlides.png'
 import LogoGForms from './../images/logoGoogleForms.png'
-
-
+import Item from './Item'
+import reactDom from 'react-dom'
+import React from 'react'
+import ReactElasticCarousel from 'react-elastic-carousel'
 
 
 export default function Main() {
@@ -150,6 +152,14 @@ export default function Main() {
                 break;
         }
     }
+
+    const breakPoints = [
+        { width: 1, itemToShow: 1 },
+        { width: 550, itemToShow: 2 },
+        { width: 768, itemToShow: 3 },
+        { width: 1200, itemToShow: 4 }
+    ]
+
     return (
         <main>
             <h1>Conecte-se</h1>
@@ -246,120 +256,232 @@ export default function Main() {
             <h1>Prepare e organize</h1>
             <div className='container2'>
 
+                {/* FERRAMENTAS GOOGLE */}
+                <h2 className='centro'>Ferramentas de produtividade e colaboração do Google.</h2>
+                
+                <div className='item-carousel-mobile'>
+                    <ReactElasticCarousel>
+                            <Item>
+                                <Card
+                                    logoPath={LogoGDocs}
+                                    logoAlt='Logo do Google Documentos'
+                                    label='Com o Documentos, você pode redigir relatórios, criar propostas de
+                                    projetos conjuntos, acompanhar atas de reunião e muito mais.'
+                                    logoW
+                                />
+                                <br />
+                                <div className='divCardBtn'>
+                                    <Button id='21' btnTools label='Como usar' click={toWhere} />
+                                </div>
+                            </Item>
+                            <Item>
+                                <Card
+                                    logoPath={LogoGSheets}
+                                    logoAlt='Logo do Google Planilhas'
+                                    label='Com o Planilhas, você pode gerenciar listas de tarefas, criar planos de
+                                    projetos, analisar dados com gráficos e filtros e muito mais.'
+                                />
+                                <br />
+                                <div className='divCardBtn'>
+                                    <Button id='22' btnTools label='Como usar' click={toWhere} />
+                                </div>
+                            </Item>
+                            <Item>
+                                <Card
+                                    logoPath={LogoGSlides}
+                                    logoAlt='Logo do Google Apresentações'
+                                    label='No Apresentações, você pode criar apresentações de argumento de
+                                    venda, projetos, módulos de treinamento e muito mais.'
+                                    logoW
+                                />
+                                <br />
+                                <div className='divCardBtn'>
+                                    <Button id='23' btnTools label='Como usar' click={toWhere} />
+                                </div>
+                            </Item>
+                            <Item>
+                                <Card
+                                    logoPath={LogoGForms}
+                                    logoAlt='Logo do Google Formulários'
+                                    label='No Formulários, você pode gerenciar inscrições em eventos, criar testes,
+                                    analisar respostas e muito mais.'
+                                    logoW
+                                />
+                                <br />
+                                <div className='divCardBtn'>
+                                    <Button id='24' btnTools label='Como usar' click={toWhere} />
+                                </div>
+                            </Item>
+                            
+                            
+                            <Item>
+                                <Card
+                                    logoPath={LogoGmail}
+                                    logoAlt='Logo do Gmail'
+                                    label='No Gmail, você pode enviar e pesquisar mensagens, organizar sua
+                                    Caixa de entrada e conversar usando os recursos integrados de chat e videochamada.'
+                                />
+                                <br />
+                                <div className='divCardBtn'>
+                                    <Button id='17' btnTools label='Como usar' click={toWhere} />
+                                </div>
+                            </Item>
 
-            {/* FERRAMENTAS GOOGLE */}
-            <h2>Ferramentas de produtividade e colaboração do Google.</h2>
-                <div className='divTools'>
-                    <div className='divWithCards'>
-                        <div className='divCard'>
-                            <Card
-                                logoPath={LogoGmail}
-                                logoAlt='Logo do Gmail'
-                                label='No Gmail, você pode enviar e pesquisar mensagens, organizar sua
-                                Caixa de entrada e conversar usando os recursos integrados de chat e videochamada.'
-                            />
-                            <br />
-                            <div className='divCardBtn'>
-                                <Button id='17' btnTools label='Como usar' click={toWhere} />
-                            </div>
+                            <Item>
+                                <Card
+                                    logoPath={LogoGCalendar}
+                                    logoAlt='Logo do Google Agenda'
+                                    label='No Agenda, você pode acompanhar eventos importantes, compartilhar seus
+                                    compromissos e criar várias programações.'
+                                />
+                                <br />
+                                <div className='divCardBtn'>
+                                    <Button id='18' btnTools label='Como usar' click={toWhere} />
+                                </div>
+                            </Item>
+
+                            <Item>
+                                <Card
+                                    logoPath={LogoGDrive}
+                                    logoAlt='Logo do Google Drive'
+                                    label='No Drive, você mantém tudo em um só lugar, visualiza diferentes
+                                    formatos de arquivo sem comprar outros softwares e acessa os
+                                    arquivos em qualquer dispositivo.'
+                                />
+                                <br />
+                                <div className='divCardBtn'>
+                                    <Button id='19' btnTools label='Como usar' click={toWhere} />
+                                </div>
+                            </Item>
+                            <Item>
+                                <Card
+                                    logoPath={LogoGChat}
+                                    logoAlt='Logo do Google Chat'
+                                    label='No Chat, você pode fazer perguntas rápidas, colaborar em chats em
+                                    grupo, criar salas virtuais para projetos em equipe e muito mais.'
+                                />
+                                <br />
+                                <div className='divCardBtn'>
+                                    <Button id='20' btnTools label='Como usar' click={toWhere} />
+                                </div>
+                            </Item>
+
+                    </ReactElasticCarousel>
+                </div>
+
+                <div className='item-carousel-web'>
+
+                    <ReactElasticCarousel breakPoints={breakPoints}>
+
+                        <div className='item-carousel'>
+                            <Item>
+                                <Card
+                                    logoPath={LogoGDocs}
+                                    logoAlt='Logo do Google Documentos'
+                                    label='Com o Documentos, você pode redigir relatórios, criar propostas de
+                                    projetos conjuntos, acompanhar atas de reunião e muito mais.'
+                                    logoW
+                                />
+                                <br />
+                                <div className='divCardBtn'>
+                                    <Button id='21' btnTools label='Como usar' click={toWhere} />
+                                </div>
+                            </Item>
+                            <Item>
+                                <Card
+                                    logoPath={LogoGSheets}
+                                    logoAlt='Logo do Google Planilhas'
+                                    label='Com o Planilhas, você pode gerenciar listas de tarefas, criar planos de
+                                    projetos, analisar dados com gráficos e filtros e muito mais.'
+                                />
+                                <br />
+                                <div className='divCardBtn'>
+                                    <Button id='22' btnTools label='Como usar' click={toWhere} />
+                                </div>
+                            </Item>
+                            <Item>
+                                <Card
+                                    logoPath={LogoGSlides}
+                                    logoAlt='Logo do Google Apresentações'
+                                    label='No Apresentações, você pode criar apresentações de argumento de
+                                    venda, projetos, módulos de treinamento e muito mais.'
+                                    logoW
+                                />
+                                <br />
+                                <div className='divCardBtn'>
+                                    <Button id='23' btnTools label='Como usar' click={toWhere} />
+                                </div>
+                            </Item>
+                            <Item>
+                                <Card
+                                    logoPath={LogoGForms}
+                                    logoAlt='Logo do Google Formulários'
+                                    label='No Formulários, você pode gerenciar inscrições em eventos, criar testes,
+                                    analisar respostas e muito mais.'
+                                    logoW
+                                />
+                                <br />
+                                <div className='divCardBtn'>
+                                    <Button id='24' btnTools label='Como usar' click={toWhere} />
+                                </div>
+                            </Item>
+                        </div>
+                        <div className='item-carousel'>
+
+                            <Item>
+                                <Card
+                                    logoPath={LogoGmail}
+                                    logoAlt='Logo do Gmail'
+                                    label='No Gmail, você pode enviar e pesquisar mensagens, organizar sua
+                                    Caixa de entrada e conversar usando os recursos integrados de chat e videochamada.'
+                                />
+                                <br />
+                                <div className='divCardBtn'>
+                                    <Button id='17' btnTools label='Como usar' click={toWhere} />
+                                </div>
+                            </Item>
+
+                            <Item>
+                                <Card
+                                    logoPath={LogoGCalendar}
+                                    logoAlt='Logo do Google Agenda'
+                                    label='No Agenda, você pode acompanhar eventos importantes, compartilhar seus
+                                    compromissos e criar várias programações.'
+                                />
+                                <br />
+                                <div className='divCardBtn'>
+                                    <Button id='18' btnTools label='Como usar' click={toWhere} />
+                                </div>
+                            </Item>
+
+                            <Item>
+                                <Card
+                                    logoPath={LogoGDrive}
+                                    logoAlt='Logo do Google Drive'
+                                    label='No Drive, você mantém tudo em um só lugar, visualiza diferentes
+                                    formatos de arquivo sem comprar outros softwares e acessa os
+                                    arquivos em qualquer dispositivo.'
+                                />
+                                <br />
+                                <div className='divCardBtn'>
+                                    <Button id='19' btnTools label='Como usar' click={toWhere} />
+                                </div>
+                            </Item>
+                            <Item>
+                                <Card
+                                    logoPath={LogoGChat}
+                                    logoAlt='Logo do Google Chat'
+                                    label='No Chat, você pode fazer perguntas rápidas, colaborar em chats em
+                                    grupo, criar salas virtuais para projetos em equipe e muito mais.'
+                                />
+                                <br />
+                                <div className='divCardBtn'>
+                                    <Button id='20' btnTools label='Como usar' click={toWhere} />
+                                </div>
+                            </Item>
                         </div>
 
-                        <div className='divCard'>
-                            <Card
-                                logoPath={LogoGCalendar}
-                                logoAlt='Logo do Google Agenda'
-                                label='No Agenda, você pode acompanhar eventos importantes, compartilhar seus
-                                compromissos e criar várias programações.'
-                            />
-                            <br />
-                            <div className='divCardBtn'>
-                                <Button id='18' btnTools label='Como usar' click={toWhere} />
-                            </div>
-                        </div>
-
-                        <div className='divCard'>
-                            <Card
-                                logoPath={LogoGDrive}
-                                logoAlt='Logo do Google Drive'
-                                label='No Drive, você mantém tudo em um só lugar, visualiza diferentes
-                                formatos de arquivo sem comprar outros softwares e acessa os
-                                arquivos em qualquer dispositivo.'
-                            />
-                            <br />
-                            <div className='divCardBtn'>
-                                <Button id='19' btnTools label='Como usar' click={toWhere} />
-                            </div>
-                        </div>
-
-                        <div className='divCard'>
-                            <Card
-                                logoPath={LogoGChat}
-                                logoAlt='Logo do Google Chat'
-                                label='No Chat, você pode fazer perguntas rápidas, colaborar em chats em
-                                grupo, criar salas virtuais para projetos em equipe e muito mais.'
-                            />
-                            <br />
-                            <div className='divCardBtn'>
-                                <Button id='20' btnTools label='Como usar' click={toWhere} />
-                            </div>
-                        </div>
-
-                        <div className='divCard'>
-                            <Card
-                                logoPath={LogoGDocs}
-                                logoAlt='Logo do Google Documentos'
-                                label='Com o Documentos, você pode redigir relatórios, criar propostas de
-                                projetos conjuntos, acompanhar atas de reunião e muito mais.'
-                                logoW
-                            />
-                            <br />
-                            <div className='divCardBtn'>
-                                <Button id='21' btnTools label='Como usar' click={toWhere} />
-                            </div>
-                        </div>
-
-                        <div className='divCard'>
-                            <Card
-                                logoPath={LogoGSheets}
-                                logoAlt='Logo do Google Planilhas'
-                                label='Com o Planilhas, você pode gerenciar listas de tarefas, criar planos de
-                                projetos, analisar dados com gráficos e filtros e muito mais.'
-                            />
-                            <br />
-                            <div className='divCardBtn'>
-                                <Button id='22' btnTools label='Como usar' click={toWhere} />
-                            </div>
-                        </div>
-
-                        <div className='divCard'>
-                            <Card
-                                logoPath={LogoGSlides}
-                                logoAlt='Logo do Google Apresentações'
-                                label='No Apresentações, você pode criar apresentações de argumento de
-                                venda, projetos, módulos de treinamento e muito mais.'
-                                logoW
-                            />
-                            <br />
-                            <div className='divCardBtn'>
-                                <Button id='23' btnTools label='Como usar' click={toWhere} />
-                            </div>
-                        </div>
-
-                        <div className='divCard'>
-                            <Card
-                                logoPath={LogoGForms}
-                                logoAlt='Logo do Google Formulários'
-                                label='No Formulários, você pode gerenciar inscrições em eventos, criar testes,
-                                analisar respostas e muito mais.'
-                                logoW
-                            />
-                            <br />
-                            <div className='divCardBtn'>
-                                <Button id='24' btnTools label='Como usar' click={toWhere} />
-                            </div>
-                        </div>
-
-                    </div>
+                    </ReactElasticCarousel>
                 </div>
 
                 <div className='divToolsLinks'>
@@ -456,25 +578,25 @@ export default function Main() {
                         <p>
                             &nbsp;&nbsp;É uma plataforma gratuita de busca que oferece a professores, gestores e
                             redes de ensino mais de 30 mil recursos digitais de aprendizagem, que
-                            proporcionam interatividade, dinamismo e inovação às práticas pedagógicas!<br/><br/>
-                            <b>Quais são os principais benefícios da plataforma?</b><br/>
-                            - Apoia as práticas pedagógicas;<br/>
+                            proporcionam interatividade, dinamismo e inovação às práticas pedagógicas!<br /><br />
+                            <b>Quais são os principais benefícios da plataforma?</b><br />
+                            - Apoia as práticas pedagógicas;<br />
                             - Desenvolve os professores e gestores para o uso da
-                            tecnologia em sala de aula;<br/>
+                            tecnologia em sala de aula;<br />
                             - Oferece um acervo diferenciado de conteúdos e
-                            formatos;<br/>
+                            formatos;<br />
                             - Possui planos de aula e objetos digitais de aprendizagem
-                            (ODAs) alinhados à BNCC.<br/><br/><br/>
-                            <b>Que tipos de materiais estão disponíveis na Escola Digital?</b> <br/>
+                            (ODAs) alinhados à BNCC.<br /><br /><br />
+                            <b>Que tipos de materiais estão disponíveis na Escola Digital?</b> <br />
                             &nbsp;&nbsp;A Escola Digital funciona como um amplo repositório, organizado com base nos
                             parâmetros curriculares nacionais. São vídeos, plataformas, games, animações,
-                            videoaulas, infográficos, mapas, entre outros, categorizados por série, disciplina, 
-                            tema, tipo de mídia, idioma, versão on-line e off-line, licença de uso, se possuem 
-                            ferramentas de acessibilidade, entre outras especificidades.<br/> &nbsp;&nbsp;O site também indica 
-                            recursos digitais capazes de apoiar a criação de novos objetos de aprendizagem, 
-                            o trabalho com temas transversais e a realização de projetos na comunidade, entre 
+                            videoaulas, infográficos, mapas, entre outros, categorizados por série, disciplina,
+                            tema, tipo de mídia, idioma, versão on-line e off-line, licença de uso, se possuem
+                            ferramentas de acessibilidade, entre outras especificidades.<br /> &nbsp;&nbsp;O site também indica
+                            recursos digitais capazes de apoiar a criação de novos objetos de aprendizagem,
+                            o trabalho com temas transversais e a realização de projetos na comunidade, entre
                             outras possibilidades educativas. Todos os links dos recursos indicados levam
-                             diretamente ao site de origem do recurso.
+                            diretamente ao site de origem do recurso.
                         </p>
                         <div className='divToolsBtn'>
                             <Button id='25' btnTools label='Ir para o site' click={toWhere} />
