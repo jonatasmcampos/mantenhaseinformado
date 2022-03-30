@@ -8,6 +8,7 @@ import LogoGoogle from './../images/google.png'
 import LogoGoconqr from './../images/goconqr.png'
 import LogoTrello from './../images/trello.png'
 import LogoClassroom from './../images/classroom.png'
+import LogoEscolaDigital from './../images/escoladigital.png'
 
 export default function Navbar() {
     return (
@@ -17,11 +18,10 @@ export default function Navbar() {
                 <img src={LogoGoogleMeet} alt="Icone do google meet" />
                 <img src={LogoMicrosoftTeams} alt="Icone do microsoft teams" />
                 <img src={LogoGoogle} alt="Icone do googel para ferramentas google" />
-
-                <img src={LogoGoconqr} alt="Icone do googel para ferramentas google" className="goconqr" />
-                <img src={LogoTrello} alt="Icone do googel para ferramentas google" className="trello"/>
-                <img src={LogoClassroom} alt="Icone do googel para ferramentas google" className="classroom"/>
-
+                <img src={LogoGoconqr} alt="Icone do goconqr" className="goconqr" />
+                <img src={LogoTrello} alt="Icone do trello" className="trello"/>
+                <img src={LogoClassroom} alt="Icone do google sala de aula" className="classroom"/>
+                <img src={LogoEscolaDigital} alt="Icone do escola digital" className="classroom"/>
             </nav>
         </>
     )
