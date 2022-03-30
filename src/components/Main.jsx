@@ -246,81 +246,9 @@ export default function Main() {
             <h1>Prepare e organize</h1>
             <div className='container2'>
 
-                <div className='divTools'>
-                    <div className='divImageTools'>
-                        <img src={ImgGoConqr} alt='Imagem do GoConqr' className='imgTools' />
-                    </div>
-                    <div>
-                        <img src={LogoGoConqr} alt='logo do GoConqr' className='logoOnTheLeft' />
-                        <p>
-                            &nbsp; Fornece materiais como mapas mentais, flashcards, quizzes e slides.
-                            Também há recursos prontos, os quais você também poderá utilizar.<br /><br />
-                            &nbsp; Esta ferramenta possui uma biblioteca com 9 milhões de materiais criados pelos membros,
-                            podendo ser usados de forma gratuita! Também é possível acompanhar o progresso dos
-                            estudantes, analisando o resultado obtido com cada recurso.
-                        </p>
-                        <div className='divToolsBtn'>
-                            <Button id='11' btnTools label='Ir para o site' click={toWhere} />
-                            <Button id='12' btnTools label='Como usar as ferramentas do GoConqr' click={toWhere} />
-                        </div>
-                    </div>
-                </div>
 
-                <hr />
-
-                <div className='divTools'>
-                    <div className='divImageToolsLeft'>
-                        <img src={ImgTrello} alt='Imagem do Trello' className='imgTools' />
-                    </div>
-                    <div>
-                        <img src={LogoTrello} alt='logo do Trello' className='logoOnTheRight' />
-                        <p>
-                            &nbsp; Trello é ótimo no gerenciamento de duas atividades. Nela, você consegue criar
-                            cards com as tarefas, colocar seus prazos de entrega, marcá-las de acordo com etapas,
-                            anexar arquivos também é possível, colocar etiquetas com o estado das atividades
-                            e adicionar membros. <br /> <br /> &nbsp; Você ainda pode ter uma parte que contenha
-                            somente suas atividades e outras para cada uma das suas turmas. Administrar trabalhos
-                            em grupo, interdisciplinares e quaisquer outras entregas que os alunos tenham que
-                            fazer.
-                        </p>
-                        <div className='divToolsBtn'>
-                            <Button id='13' btnTools label='Ir para o site' click={toWhere} />
-                            <Button id='14' btnTools label='Guia Trello' click={toWhere} />
-                        </div>
-                    </div>
-                </div>
-
-                <hr />
-
-                <div className='divTools'>
-                    <div className='divImageTools'>
-                        <img src={ImgGoogleClassroom} alt='Imagem do Google Sala de Aula' className='imgTools' />
-                    </div>
-                    <div>
-                        <img src={LogoGoogleClassroom} alt='logo do Google Sala de Aula' className='logoOnTheLeft' />
-                        <p>
-                            &nbsp; Esta plataforma te da a possibilidade de gerenciar atividades, avaliações e
-                            conteúdos iguais ao de uma sala de aula. Você apenas precisa criar uma classe e
-                            adicionar os alunos via e-mail e começar os trabalhos. É possível anexar links,
-                            arquivos, enviar e receber os trabalhos. Você pode usar o Google Sala
-                            de Aula na sua escola para simplificar as atividades, aumentar a colaboração
-                            e melhorar a comunicação.
-                        </p>
-                        <div className='divToolsBtn'>
-                            <Button id='15' btnTools label='Ir para o site' click={toWhere} />
-                            <Button id='16' btnTools label='Central de Ajuda' click={toWhere} />
-                        </div>
-                        <div className='divToolsLinks'>
-                            <a href="https://support.google.com/edu/classroom/answer/6020273?hl=pt-BR&ref_topic=9049835" target="_blank" rel="noreferrer"><span>►</span> Criar, participar e organizar suas turmas.</a><br />
-                            <a href="https://support.google.com/edu/classroom/answer/6020265?hl=pt-BR&ref_topic=9049978" target="_blank" rel="noreferrer"><span>►</span> Criar, acompanhar e atribuir nota às atividades.</a><br />
-                            <a href="https://support.google.com/edu/classroom/answer/6025210?hl=pt-BR&ref_topic=6024979" target="_blank" rel="noreferrer"><span>►</span> Comunicação com a turma e os responsáveis.</a><br />
-                        </div>
-                    </div>
-                </div>
-
-                <hr /> <br />
-
-                <h2>Ferramentas de produtividade e colaboração do Google.</h2>
+            {/* FERRAMENTAS GOOGLE */}
+            <h2>Ferramentas de produtividade e colaboração do Google.</h2>
                 <div className='divTools'>
                     <div className='divWithCards'>
                         <div className='divCard'>
@@ -441,6 +369,82 @@ export default function Main() {
                         em um mesmo arquivo.
                     </a>
                 </div>
+                {/* FERRAMENTAS GOOGLE */}
+
+                <hr /> <br />
+
+                <div className='divTools'>
+                    <div className='divImageTools'>
+                        <img src={ImgGoConqr} alt='Imagem do GoConqr' className='imgTools' />
+                    </div>
+                    <div>
+                        <img src={LogoGoConqr} alt='logo do GoConqr' className='logoOnTheLeft' />
+                        <p>
+                            &nbsp; Fornece materiais como mapas mentais, flashcards, quizzes e slides.
+                            Também há recursos prontos, os quais você também poderá utilizar.<br /><br />
+                            &nbsp; Esta ferramenta possui uma biblioteca com 9 milhões de materiais criados pelos membros,
+                            podendo ser usados de forma gratuita! Também é possível acompanhar o progresso dos
+                            estudantes, analisando o resultado obtido com cada recurso.
+                        </p>
+                        <div className='divToolsBtn'>
+                            <Button id='11' btnTools label='Ir para o site' click={toWhere} />
+                            <Button id='12' btnTools label='Como usar as ferramentas do GoConqr' click={toWhere} />
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div className='divTools'>
+                    <div className='divImageToolsLeft'>
+                        <img src={ImgTrello} alt='Imagem do Trello' className='imgTools' />
+                    </div>
+                    <div>
+                        <img src={LogoTrello} alt='logo do Trello' className='logoOnTheRight' />
+                        <p>
+                            &nbsp; Trello é ótimo no gerenciamento de duas atividades. Nela, você consegue criar
+                            cards com as tarefas, colocar seus prazos de entrega, marcá-las de acordo com etapas,
+                            anexar arquivos também é possível, colocar etiquetas com o estado das atividades
+                            e adicionar membros. <br /> <br /> &nbsp; Você ainda pode ter uma parte que contenha
+                            somente suas atividades e outras para cada uma das suas turmas. Administrar trabalhos
+                            em grupo, interdisciplinares e quaisquer outras entregas que os alunos tenham que
+                            fazer.
+                        </p>
+                        <div className='divToolsBtn'>
+                            <Button id='13' btnTools label='Ir para o site' click={toWhere} />
+                            <Button id='14' btnTools label='Guia Trello' click={toWhere} />
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div className='divTools'>
+                    <div className='divImageTools'>
+                        <img src={ImgGoogleClassroom} alt='Imagem do Google Sala de Aula' className='imgTools' />
+                    </div>
+                    <div>
+                        <img src={LogoGoogleClassroom} alt='logo do Google Sala de Aula' className='logoOnTheLeft' />
+                        <p>
+                            &nbsp; Esta plataforma te da a possibilidade de gerenciar atividades, avaliações e
+                            conteúdos iguais ao de uma sala de aula. Você apenas precisa criar uma classe e
+                            adicionar os alunos via e-mail e começar os trabalhos. É possível anexar links,
+                            arquivos, enviar e receber os trabalhos. Você pode usar o Google Sala
+                            de Aula na sua escola para simplificar as atividades, aumentar a colaboração
+                            e melhorar a comunicação.
+                        </p>
+                        <div className='divToolsBtn'>
+                            <Button id='15' btnTools label='Ir para o site' click={toWhere} />
+                            <Button id='16' btnTools label='Central de Ajuda' click={toWhere} />
+                        </div>
+                        <div className='divToolsLinks'>
+                            <a href="https://support.google.com/edu/classroom/answer/6020273?hl=pt-BR&ref_topic=9049835" target="_blank" rel="noreferrer"><span>►</span> Criar, participar e organizar suas turmas.</a><br />
+                            <a href="https://support.google.com/edu/classroom/answer/6020265?hl=pt-BR&ref_topic=9049978" target="_blank" rel="noreferrer"><span>►</span> Criar, acompanhar e atribuir nota às atividades.</a><br />
+                            <a href="https://support.google.com/edu/classroom/answer/6025210?hl=pt-BR&ref_topic=6024979" target="_blank" rel="noreferrer"><span>►</span> Comunicação com a turma e os responsáveis.</a><br />
+                        </div>
+                    </div>
+                </div>
+
                 <hr /> <br />
 
                 <div className='divTools'>
