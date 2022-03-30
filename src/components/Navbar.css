@@ -1,0 +1,34 @@
+nav{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: #353839;
+    border-bottom: 1px solid red;
+    z-index: 1000;
+}
+
+nav img{
+    height: 30px;
+    margin: 2px 20px;
+}
+
+nav img:hover{
+    border: 2px dotted #FFF;
+}
+
+.zoomnav{
+    height: 40px;
+}
+
+.goconqr{
+    height: 35px;
+}
+.classroom{
+    height: 40px;
+}
+.trello{
+    height: 40px;
+}
