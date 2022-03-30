@@ -60,6 +60,6 @@ header.loaded img:nth-child(1){ animation-delay: 3s }
         padding: 20px;
     }
     .headerLogo{
-        width: 400px;
+        width: 350px;
     }
 }

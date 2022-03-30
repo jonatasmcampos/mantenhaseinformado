@@ -5,9 +5,16 @@ nav{
     justify-content: center;
     align-items: center;
     position: fixed;
+    top: 0;
     background-color: #353839;
     border-bottom: 1px solid red;
     z-index: 1000;
+}
+@media (max-width: 600px){
+    nav{
+        top: unset;
+        bottom:0;
+    }
 }
 
 nav img{
@@ -32,4 +39,33 @@ nav img:hover{
 }
 .trello{
     height: 40px;
+}
+
+@media (max-width: 600px){
+    nav{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    nav img{
+        height: 20px;
+        margin: 2px 10px;
+    }
+    nav img:hover{
+        border: 2px dotted #FFF;
+        border-radius: 7px;
+    }
+    
+    .zoomnav{
+        height: 30px;
+    }
+    
+    .goconqr{
+        height: 25px;
+    }
+    .classroom{
+        height: 30px;
+    }
+    .trello{
+        height: 30px;
+    }
 }
