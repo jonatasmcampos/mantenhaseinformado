@@ -21,7 +21,6 @@ import LogoGSheets from './../images/logoGoogleSheets.png'
 import LogoGSlides from './../images/logoGoogleSlides.png'
 import LogoGForms from './../images/logoGoogleForms.png'
 import Item from './Item'
-import reactDom from 'react-dom'
 import React from 'react'
 import ReactElasticCarousel from 'react-elastic-carousel'
 
