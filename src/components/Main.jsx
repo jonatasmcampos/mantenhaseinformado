@@ -171,10 +171,8 @@ export default function Main() {
         <main>
             <h1>Conecte-se</h1>
             <p>Abaixo você encontra algumas informações sobre a utilização de ferramentas de videochamada.</p>
-            <br />
+            
             <div className='container'>
-
-
                 {/* Cards aqui */}
             <div className='container0'>
 
