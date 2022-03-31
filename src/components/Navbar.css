@@ -1,5 +1,24 @@
+.voltar-para-topo{
+    position: fixed;
+    background: linear-gradient(to right, #ffa500, #fd0202);
+    padding: 10px;
+    align-self: center;
+    justify-self: center;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 10px;
+    z-index: 2000;
+}
+
+@media(max-width: 600px){
+    .voltar-para-topo{
+        right: 20px;
+        bottom: 70px;
+    }
+}
+
 nav{
-    height: 70px;
+    height: 50px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -18,20 +37,20 @@ nav{
 }
 
 nav img{
-    height: 30px;
+    height: 25px;
     margin: 2px 20px;
 }
 
 nav img:hover{
-    border: 2px dotted #FFF;
+    border: 2px dashed #FFF;
     border-radius: 7px;
 }
 
 .zoomnav{
-    height: 40px;
+    height: 30px;
 }
 
-.goconqr{
+/* .goconqr{
     height: 35px;
 }
 .classroom{
@@ -39,7 +58,7 @@ nav img:hover{
 }
 .trello{
     height: 40px;
-}
+} */
 
 @media (max-width: 600px){
     nav{

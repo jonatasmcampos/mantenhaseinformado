@@ -20,6 +20,7 @@ import LogoGDocs from './../images/logoGoogleDocs.png'
 import LogoGSheets from './../images/logoGoogleSheets.png'
 import LogoGSlides from './../images/logoGoogleSlides.png'
 import LogoGForms from './../images/logoGoogleForms.png'
+import Topo from './../images/seta-pra-cima.png'
 import Item from './Item'
 import React from 'react'
 import { useState } from "react";
@@ -168,7 +169,10 @@ export default function Main() {
     };
 
     return (
-        <main>
+        <main id='conecte-se'>
+            <a href="#topo" className='voltar-para-topo'>
+                <img src={Topo} alt="Icone de seta para cima" />
+            </a>
             <h1>Conecte-se</h1>
             <p>Abaixo você encontra algumas informações sobre a utilização de ferramentas de videochamada.</p>
             
@@ -262,7 +266,7 @@ export default function Main() {
                     </div>
                 </div>
 
-                <div 
+                <div
                     className={toggleState === 3 ? 'content active-content card microsoftTeams' : "content card microsoftTeams"}
                 >
                     {/* Card Microsoft Teams */}
@@ -290,6 +294,7 @@ export default function Main() {
                         <a href="https://support.microsoft.com/pt-br/office/compartilhar-som-do-seu-computador-em-uma-reuni%C3%A3o-teams-ou-evento-ao-vivo-dddede9f-e3d0-4330-873a-fa061a0d8e3b" target="_blank" rel="noreferrer"><span>►</span> Compartilhar som do seu computador em uma reunião.</a><br />
                     </div>
                 </div>
+            <div id='prepare-organize'></div>
 
             </div>
                 {/* end Cards aqui */}
@@ -535,12 +540,14 @@ export default function Main() {
                         Clicando aqui você vai saber como você e outra pessoa podem digitar ou alterar, por exemplo,
                         em um mesmo arquivo.
                     </a>
+                    
+                <div id='goconqr'></div>
                 </div>
                 {/* FERRAMENTAS GOOGLE */}
 
                 <hr /> <br />
 
-                <div className='divTools'>
+                <div  className='divTools'>
                     <div className='divImageTools'>
                         <img src={ImgGoConqr} alt='Imagem do GoConqr' className='imgTools' />
                     </div>
@@ -559,6 +566,7 @@ export default function Main() {
                         </div>
                     </div>
                 </div>
+                <div id='trello'></div>
 
                 <hr />
 
@@ -583,6 +591,7 @@ export default function Main() {
                         </div>
                     </div>
                 </div>
+                <div id='classroom'></div>
 
                 <hr />
 
@@ -612,6 +621,7 @@ export default function Main() {
                     </div>
                 </div>
 
+                <div id='escoladigital'></div>
                 <hr /> <br />
 
                 <div className='divTools'>

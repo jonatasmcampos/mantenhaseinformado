@@ -14,14 +14,39 @@ export default function Navbar() {
     return (
         <>
             <nav id="navbar">
-                <img src={LogoZoom} alt="Icone do zoom" className="zoomnav"/>
-                <img src={LogoGoogleMeet} alt="Icone do google meet" />
-                <img src={LogoMicrosoftTeams} alt="Icone do microsoft teams" />
-                <img src={LogoGoogle} alt="Icone do googel para ferramentas google" />
-                <img src={LogoGoconqr} alt="Icone do goconqr" className="goconqr" />
-                <img src={LogoTrello} alt="Icone do trello" className="trello"/>
-                <img src={LogoClassroom} alt="Icone do google sala de aula" className="classroom"/>
-                <img src={LogoEscolaDigital} alt="Icone do escola digital" className="classroom"/>
+                <a href="#conecte-se">
+                    <img src={LogoZoom} alt="Icone do zoom" className="zoomnav"/>
+                </a>
+
+                <a href="#conecte-se">
+                    <img src={LogoGoogleMeet} alt="Icone do google meet" />
+                </a>
+
+                <a href="#conecte-se">
+                    <img src={LogoMicrosoftTeams} alt="Icone do microsoft teams" />
+                </a>
+                
+                <a href="#prepare-organize">
+                    <img src={LogoGoogle} alt="Icone do googel para ferramentas google" />
+                </a>
+                
+
+                <a href="#goconqr">
+                    <img src={LogoGoconqr} alt="Icone do goconqr" className="goconqr" />
+                </a>
+
+                <a href="#trello">
+                    <img src={LogoTrello} alt="Icone do trello" className="trello"/>
+                </a>
+
+                <a href="#classroom">
+                    <img src={LogoClassroom} alt="Icone do google sala de aula" className="classroom"/>
+                </a>
+
+                <a href="#escoladigital">
+                    <img src={LogoEscolaDigital} alt="Icone do escola digital" className="classroom"/> 
+                </a> 
+                
             </nav>
         </>
     )

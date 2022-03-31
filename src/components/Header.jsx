@@ -10,7 +10,7 @@ export default function Header() {
     });
     return (
         <>
-            <header>
+            <header id="topo">
                 <div className='headerDiv'>
                     <div className='texts'>
                         <h1>Mantenha-se Informado</h1>
