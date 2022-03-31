@@ -22,6 +22,7 @@ import LogoGSlides from './../images/logoGoogleSlides.png'
 import LogoGForms from './../images/logoGoogleForms.png'
 import Item from './Item'
 import React from 'react'
+import { useState } from "react";
 import ReactElasticCarousel from 'react-elastic-carousel'
 
 
@@ -159,13 +160,52 @@ export default function Main() {
         { width: 1200, itemToShow: 4 }
     ]
 
+
+    const [toggleState, setToggleState] = useState(1);
+
+    const toggleTab = (index) => {
+        setToggleState(index);
+    };
+
     return (
         <main>
             <h1>Conecte-se</h1>
             <p>Abaixo você encontra algumas informações sobre a utilização de ferramentas de videochamada.</p>
             <br />
             <div className='container'>
-                <div className="card zoom">
+
+
+                {/* Cards aqui */}
+            <div className='container0'>
+
+                <div className="bloc-tabs">
+                    <div 
+                        onClick={() => toggleTab(1)} 
+                        className={toggleState === 1 ? "tabs active-tabs" : "tabs"}>
+                           
+                            <img className='tags-img-zoom' src={LogoZoom} alt='Logo do Zoom' />
+                           
+                    </div>
+                    <div 
+                        onClick={() => toggleTab(2)} 
+                        className={toggleState === 2 ? "tabs active-tabs" : "tabs"}>
+                            
+                            <img className='tags-img-meet' src={LogoGoogleMeet} alt='Logo do Google meet' />
+                           
+                    </div>
+                    <div 
+                        onClick={() => toggleTab(3)} 
+                        className={toggleState === 3 ? "tabs active-tabs" : "tabs"}>
+                            
+                            <img className='tags-img-teams' src={LogoMicrosoftTeams} alt='Logo do Teams' />
+                           
+                    </div>
+                </div>
+
+                <div 
+                    className={toggleState === 1 ? "content active-content card zoom" : "content card zoom"}
+                >
+
                     {/* Card Zoom */}
                     <div className='imageTextDiv'>
                         <img src={LogoZoom} alt='Logo do Zoom' />
@@ -194,7 +234,9 @@ export default function Main() {
                     </div>
                 </div>
 
-                <div className='card googleMeet'>
+                <div 
+                    className={toggleState === 2 ? 'content active-content card googleMeet' : "content card googleMeet"}
+                >
                     {/* Card Google Meet */}
                     <div className='imageTextDiv'>
                         <img src={LogoGoogleMeet} alt='Logo do Google Meet' />
@@ -222,7 +264,9 @@ export default function Main() {
                     </div>
                 </div>
 
-                <div className='card microsoftTeams'>
+                <div 
+                    className={toggleState === 3 ? 'content active-content card microsoftTeams' : "content card microsoftTeams"}
+                >
                     {/* Card Microsoft Teams */}
                     <div className='imageTextDiv'>
                         <img src={LogoMicrosoftTeams} alt='Logo do Microsoft Teams' />
@@ -248,6 +292,10 @@ export default function Main() {
                         <a href="https://support.microsoft.com/pt-br/office/compartilhar-som-do-seu-computador-em-uma-reuni%C3%A3o-teams-ou-evento-ao-vivo-dddede9f-e3d0-4330-873a-fa061a0d8e3b" target="_blank" rel="noreferrer"><span>►</span> Compartilhar som do seu computador em uma reunião.</a><br />
                     </div>
                 </div>
+
+            </div>
+                {/* end Cards aqui */}
+
             </div>
 
             {/* Prepare e organize */}
