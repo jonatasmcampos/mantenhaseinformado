@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/mantenhaseinformado/static/css/main.0ba60dde.css",
-    "main.js": "/mantenhaseinformado/static/js/main.f875d0ac.js",
+    "main.css": "/mantenhaseinformado/static/css/main.5215b12b.css",
+    "main.js": "/mantenhaseinformado/static/js/main.fa866b19.js",
     "static/media/imgTrello.png": "/mantenhaseinformado/static/media/imgTrello.bf1f3cc540a82c458af7.png",
     "static/media/logo.png": "/mantenhaseinformado/static/media/logo.f78e157f5c35c82a9781.png",
     "static/media/teams.png": "/mantenhaseinformado/static/media/teams.5d5e1ba30b78584cb2c3.png",
@@ -13,11 +13,11 @@
     "static/media/goconqr.png": "/mantenhaseinformado/static/media/goconqr.1c96fadfa2e72ed809cd.png",
     "static/media/classroom.png": "/mantenhaseinformado/static/media/classroom.a3736aa43f0633a48e32.png",
     "index.html": "/mantenhaseinformado/index.html",
-    "main.0ba60dde.css.map": "/mantenhaseinformado/static/css/main.0ba60dde.css.map",
-    "main.f875d0ac.js.map": "/mantenhaseinformado/static/js/main.f875d0ac.js.map"
+    "main.5215b12b.css.map": "/mantenhaseinformado/static/css/main.5215b12b.css.map",
+    "main.fa866b19.js.map": "/mantenhaseinformado/static/js/main.fa866b19.js.map"
   },
   "entrypoints": [
-    "static/css/main.0ba60dde.css",
-    "static/js/main.f875d0ac.js"
+    "static/css/main.5215b12b.css",
+    "static/js/main.fa866b19.js"
   ]
 }
